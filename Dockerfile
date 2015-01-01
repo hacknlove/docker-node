@@ -1,7 +1,7 @@
 FROM node:slim
 
 VOLUME /src
-WORKDIR /root
+WORKDIR /src
 
 env NODE_ENV production
 env NPM_SCRIPT start
