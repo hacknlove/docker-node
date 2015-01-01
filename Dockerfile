@@ -4,7 +4,7 @@ VOLUME /src
 WORKDIR /root
 
 env NODE_ENV production
-env NODE_SCRIPT start
+env NPM_SCRIPT start
 env HOME /src
 cmd /root/start.sh
 
