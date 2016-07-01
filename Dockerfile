@@ -1,5 +1,7 @@
 FROM node:slim
 
+LABEL version="1.0"
+
 VOLUME /src
 WORKDIR /src
 
