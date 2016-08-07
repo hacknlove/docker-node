@@ -1,6 +1,13 @@
-FROM node:slim
+FROM ubuntu:16.04
 
-LABEL version="1.0"
+MAINTAINER pykiss
+
+LABEL version="2.1"
+
+RUN apt-get update -yqq
+RUN apt-get install curl -yqq
+RUN apt-get install nodejs -yqq
+RUN apt-get install npm -yqq
 
 VOLUME /src
 WORKDIR /src
@@ -13,8 +20,3 @@ cmd /root/start.sh
 
 ADD start.sh /root/start.sh
 RUN chmod +x /root/start.sh
-
-
-RUN apt-get update -yqq
-RUN apt-get upgrade -yqq
-RUN apt-get install -yqq sudo
