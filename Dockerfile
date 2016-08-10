@@ -8,6 +8,7 @@ RUN apt-get update -yqq
 RUN apt-get install curl -yqq
 RUN apt-get install nodejs -yqq
 RUN apt-get install npm -yqq
+RUN ln /usr/bin/nodejs /usr/bin/node
 
 VOLUME /src
 WORKDIR /src
